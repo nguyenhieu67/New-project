@@ -1,0 +1,53 @@
+.footer {
+    padding: 100px 0 30px;
+    background: var(--color-bg);
+    color: var(--color-6);
+
+    &__row {
+        display: grid;
+        grid-template-columns: 2.5fr 1.2fr 1fr 1fr 1fr;
+    }
+
+    &__desc {
+        margin: 12px 0 20px;
+        width: 270px;
+
+        line-height: 1.75;
+    }
+
+    &__social {
+        display: flex;
+        gap: 12px;
+    }
+
+    &__heading {
+        margin-bottom: 16px;
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 700;
+        color: var(--color-text);
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 8px 0;
+
+        line-height: 1.75;
+    }
+
+    &__separate {
+        margin: 55px 0 30px;
+        height: 1.5px;
+        background: var(--color-6);
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+
+        &--right {
+            display: flex;
+            gap: 30px;
+        }
+    }
+}

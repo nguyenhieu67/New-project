@@ -1,0 +1,32 @@
+.header {
+    background: var(--color-bg);
+    padding: 37px 0;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    margin-left: 292px;
+    margin-right: auto;
+    &__list {
+        display: flex;
+    }
+
+    &__link {
+        padding: 0 24px;
+    }
+}
+
+.top-act {
+    display: flex;
+    gap: 30px;
+
+    &__sign-up {
+        font-size: inherit;
+        min-width: 107px;
+        height: 44px;
+    }
+}

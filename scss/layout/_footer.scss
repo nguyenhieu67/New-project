@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .footer {
     padding: 100px 0 30px;
     background: var(--color-bg);
@@ -6,6 +8,10 @@
     &__row {
         display: grid;
         grid-template-columns: 2.5fr 1.2fr 1fr 1fr 1fr;
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__desc {
@@ -44,10 +50,20 @@
     &__copyright {
         display: flex;
         justify-content: space-between;
+        gap: 20px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+        }
 
         &--right {
             display: flex;
             gap: 30px;
+
+            @include abstracts.screen(lg) {
+                flex-direction: column;
+                gap: 20px;
+            }
         }
     }
 }

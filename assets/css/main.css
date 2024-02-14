@@ -1380,7 +1380,7 @@ strong {
 
 .header {
   background: var(--color-bg);
-  padding: 37px 0;
+  padding: 37px 10px;
 }
 
 .top-bar {
@@ -1406,6 +1406,114 @@ strong {
   height: 44px;
 }
 
+.hero {
+  padding: 52px 10px 100px;
+  background: var(--color-bg);
+}
+.hero__link {
+  font-size: 1.8rem;
+  line-height: 1.66;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+.hero__heading {
+  margin-top: 12px;
+  font-size: 7.4rem;
+  line-height: 1;
+  font-weight: 600;
+}
+.hero__desc {
+  margin-top: 18px;
+  font-size: 1.8rem;
+  line-height: 1.66;
+}
+.hero__media {
+  height: 594px;
+}
+.hero__img {
+  position: relative;
+  right: -24px;
+  padding-top: 89%;
+}
+@media (max-width: 767.98px) {
+  .hero__img {
+    right: 0;
+  }
+}
+.hero__img-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.form-input {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 38px;
+}
+@media (max-width: 767.98px) {
+  .form-input {
+    flex-direction: column;
+  }
+}
+.form-input__icon {
+  margin: 0 12px 0 16px;
+}
+.form__row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border: 1.5px solid var(--color-text);
+  border-radius: 6px;
+  background: #fff;
+}
+.form__input {
+  padding: 0 12px 0 0;
+  width: 100%;
+  height: 100%;
+}
+.form__btn {
+  min-width: 135px;
+}
+@media (max-width: 767.98px) {
+  .form__btn {
+    width: 100%;
+  }
+}
+
+.link-down {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 38px 0 50px;
+}
+@media (max-width: 767.98px) {
+  .link-down {
+    margin-top: 18px;
+  }
+}
+.link-down__text {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.link-down__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--color-text);
+  background: #fff;
+  object-fit: cover;
+}
+
 .footer {
   padding: 100px 0 30px;
   background: var(--color-bg);
@@ -1428,10 +1536,14 @@ strong {
 .footer__social {
   display: flex;
   gap: 12px;
+  margin-bottom: 30px;
+}
+.footer .logo {
+  color: var(--color-text);
 }
 .footer__heading {
   margin-bottom: 16px;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 1.5;
   font-weight: 700;
   color: var(--color-text);

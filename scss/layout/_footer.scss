@@ -24,11 +24,17 @@
     &__social {
         display: flex;
         gap: 12px;
+
+        margin-bottom: 30px;
+    }
+
+    .logo {
+        color: var(--color-text);
     }
 
     &__heading {
         margin-bottom: 16px;
-        font-size: 20px;
+        font-size: 2rem;
         line-height: 1.5;
         font-weight: 700;
         color: var(--color-text);

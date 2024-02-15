@@ -12,8 +12,8 @@
     --color-like: #29b067;
     --color-warning: #f05e36;
     --color-4: #ffcf54;
-    --color-text: #191720;
-    --color-6: #575363;
+    --color-5: #191720;
+    --color-text: #575363;
     --color-bg: #fffae3;
     --color-8: #e8e6ed;
 }
@@ -73,6 +73,15 @@ input:-webkit-autofill:hover {
 h1,
 h2 {
     font-family: RobotoSerif, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-5);
 }
 
 i,

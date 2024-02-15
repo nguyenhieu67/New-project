@@ -1,0 +1,662 @@
+@use "../abstracts";
+
+.section__heading {
+    max-width: 470px;
+    font-size: 4.4rem;
+    font-weight: 600;
+}
+
+.section__desc {
+    max-width: 470px;
+    margin-top: 18px;
+    font-size: 1.8rem;
+    line-height: 1.66;
+}
+
+// Hero
+.hero {
+    padding: 52px 10px 100px;
+    background: var(--color-bg);
+
+    &__link {
+        font-size: 1.8rem;
+        line-height: 1.66;
+        font-weight: 500;
+        color: var(--color-primary);
+    }
+
+    &__heading {
+        margin-top: 12px;
+        font-size: 7.4rem;
+        line-height: 1;
+        font-weight: 600;
+    }
+
+    &__desc {
+        margin-top: 18px;
+        font-size: 1.8rem;
+        line-height: 1.66;
+    }
+
+    &__img {
+        position: relative;
+        right: -24px;
+        padding-top: 89%;
+
+        @include abstracts.screen(lg) {
+            right: 0;
+        }
+
+        &-thumb {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.form {
+    &-input {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 38px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+        }
+
+        &__icon {
+            margin: 0 12px 0 16px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+
+        border: 1.5px solid var(--color-text);
+        border-radius: 6px;
+        background: #fff;
+    }
+
+    &__input {
+        padding: 0 12px 0 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__btn {
+        min-width: 135px;
+
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
+    }
+}
+
+.link-down {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 38px 0 50px;
+
+    @include abstracts.screen(md) {
+        margin-top: 18px;
+    }
+
+    &__text {
+        font-size: 2rem;
+        line-height: 1.5;
+        font-weight: 700;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 1px solid var(--color-text);
+        background: #fff;
+        object-fit: cover;
+    }
+}
+
+// Services
+.service {
+    margin: 160px 0;
+    text-align: center;
+
+    @include abstracts.screen(lg) {
+        margin: 70px 0;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__list {
+        margin-top: 55px;
+
+        @include abstracts.screen(lg) {
+            margin-top: 30px;
+        }
+    }
+
+    &__item {
+        padding: 30px 20px;
+
+        @include abstracts.screen(lg) {
+            box-shadow: 0px 20px 70px 0px rgba(27, 12, 84, 0.07);
+        }
+
+        &:hover {
+            box-shadow: 0px 20px 70px 0px rgba(27, 12, 84, 0.07);
+
+            > .service__link {
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    &__img {
+        width: 100px;
+        height: 100px;
+    }
+
+    &__title {
+        margin-top: 20px;
+        font-size: 2.6rem;
+        line-height: 1.38;
+        font-weight: 600;
+    }
+
+    &__desc {
+        margin-top: 12px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        font-size: 1.8rem;
+        line-height: 1.66;
+        font-weight: 600;
+        color: var(--color-5);
+    }
+}
+
+// About
+.about {
+    padding: 200px 0 100px;
+    background: var(--color-bg);
+
+    @include abstracts.screen(lg) {
+        margin-top: 70px;
+        padding: 50px 0;
+    }
+
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &-media {
+        position: relative;
+        padding-top: 95%;
+
+        &__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &-content {
+        margin-bottom: 50px;
+        &__link {
+            margin-top: 38px;
+            max-width: 166px;
+        }
+    }
+}
+
+.countdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+
+    @include abstracts.screen(xl) {
+        gap: 70px;
+    }
+
+    @include abstracts.screen(lg) {
+        gap: 50px;
+    }
+
+    @include abstracts.screen(lg) {
+        flex-direction: column;
+
+        margin-bottom: 0;
+    }
+
+    margin-bottom: -100px;
+    padding: 55px 0;
+    border-radius: 12px;
+    background: var(--color-5);
+
+    &::before {
+        content: url(../../assets/icons/pizza-25.svg);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &::after {
+        content: url(../../assets/icons/leaf.svg);
+        position: absolute;
+        top: 50%;
+        right: 0;
+        translate: 0 -50%;
+
+        @include abstracts.screen(lg) {
+            top: initial;
+            bottom: 30px;
+            translate: 0 0;
+        }
+    }
+
+    &__price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        color: #fff;
+
+        &--title {
+            font-family: RobotoSerif, sans-serif;
+            font-size: 4.4rem;
+            font-weight: 600;
+        }
+
+        &--value {
+            font-size: 1.8rem;
+            line-height: 1.66;
+        }
+    }
+}
+
+// Features
+.feature {
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        margin-top: 55px;
+        padding: 48px;
+
+        @include abstracts.screen(lg) {
+            margin-top: 30px;
+            padding: 30px 12px;
+        }
+
+        &:hover {
+            box-shadow: 0px 20px 70px 0px rgba(27, 12, 84, 0.07);
+
+            > .feature__link {
+                background: var(--color-primary);
+            }
+        }
+    }
+
+    &__title {
+        margin-top: 38px;
+        font-size: 2.6rem;
+        line-height: 1.38;
+        font-weight: 600;
+    }
+
+    &__thumb {
+        position: relative;
+        padding-top: 47%;
+        width: 65%;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__link {
+        margin-top: 38px;
+    }
+}
+
+.feed {
+    &-inner {
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        margin: 18px 0 38px 26px;
+        list-style: inherit;
+    }
+
+    &-content__link {
+        max-width: 212px;
+    }
+}
+
+// Flavour
+.flavour {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 160px;
+    height: 695px;
+    background: var(--color-4);
+    text-align: center;
+
+    @include abstracts.screen(xl) {
+        height: 615px;
+    }
+
+    @include abstracts.screen(lg) {
+        margin-top: 70px;
+        height: 470px;
+    }
+
+    @include abstracts.screen(lg) {
+        height: 410px;
+    }
+
+    &-content {
+        margin-top: 100px;
+
+        @include abstracts.screen(lg) {
+            margin-top: 50px;
+        }
+    }
+
+    &__desc {
+        color: var(--color-5);
+    }
+
+    &-media {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+
+        top: 144px;
+
+        padding: 0 25px;
+        width: 100%;
+    }
+}
+
+// Cta
+.cta-bg {
+    background: var(--color-bg);
+}
+
+// Iphone review
+.ip-review {
+    position: relative;
+    display: flex;
+    gap: 30px;
+
+    margin-top: -32%;
+
+    @include abstracts.screen(lg) {
+        gap: 9px;
+    }
+
+    &__thumb {
+        position: relative;
+        padding-top: 64%;
+        flex: 1;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.app {
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @include abstracts.screen(md) {
+        margin-top: 30px;
+    }
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+    }
+}
+
+// Blockquote
+.blq {
+    margin-top: 160px;
+    padding-bottom: 160px;
+
+    @include abstracts.screen(lg) {
+        margin-top: 70px;
+        padding-bottom: 50px;
+    }
+
+    &-content {
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__row {
+        display: flex;
+        gap: 30px;
+        width: 100%;
+
+        flex-shrink: 0;
+    }
+
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+        margin-top: 69px;
+        padding: 30px 20px;
+        border-radius: 12px;
+        background: #fff;
+
+        &:hover {
+            > .blq__icon,
+            .blq__name {
+                filter: brightness(0) saturate(100%) invert(13%) sepia(99%)
+                    saturate(5327%) hue-rotate(256deg) brightness(100%)
+                    contrast(95%);
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: -14px;
+        left: 20px;
+    }
+
+    &-list__icon-bt {
+        margin-top: -50px;
+        justify-content: center;
+
+        @include abstracts.screen(md) {
+            margin-top: -110px;
+        }
+    }
+
+    &__ctm {
+        margin-top: 16px;
+        font-size: 1.8rem;
+        line-height: 1.66;
+    }
+
+    &-separate {
+        margin: 20px 0;
+        height: 1px;
+        background: var(--color-primary);
+        opacity: 0.2;
+    }
+
+    &__name {
+        color: var(--color-5);
+        font-size: 2rem;
+        line-height: 1.5;
+        font-weight: 600;
+    }
+
+    &__ai {
+        font-size: 1.4rem;
+        line-height: 1.71;
+    }
+}
+
+.nwl {
+    position: relative;
+    z-index: 1;
+    padding: 100px 0;
+    background: var(--color-like);
+    color: #fff;
+
+    @include abstracts.screen(lg) {
+        padding: 50px 0;
+    }
+
+    &::before {
+        content: url(../../assets/icons/big-hamburge.svg);
+        position: absolute;
+        top: -132px;
+        left: 0;
+
+        @include abstracts.screen(lg) {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: url(../../assets/icons/big-pizza.svg);
+        position: absolute;
+        top: 100px;
+        right: 0;
+
+        @include abstracts.screen(lg) {
+            display: none;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__heading {
+        color: inherit;
+    }
+
+    &__form {
+        width: 100%;
+        &-info {
+            margin-top: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+
+            @include abstracts.screen(lg) {
+                flex-direction: column;
+            }
+        }
+
+        &-row {
+            width: 384px;
+            height: 60px;
+
+            @include abstracts.screen(lg) {
+                width: 100%;
+            }
+        }
+
+        &-input {
+            width: 100%;
+            height: 100%;
+            padding: 0 15px;
+            border-radius: 6px;
+            background: #fff;
+            color: var(--color-5);
+        }
+
+        &-btn {
+            @include abstracts.screen(lg) {
+                width: 100%;
+            }
+        }
+    }
+}

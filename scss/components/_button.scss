@@ -4,6 +4,7 @@
     justify-content: center;
     gap: 10px;
 
+    min-width: 166px;
     height: 60px;
     padding: 0 20px;
     border-radius: 6px;
@@ -12,6 +13,8 @@
 
     font-size: 18px;
     font-weight: 600;
+    color: #fff !important;
+
     white-space: nowrap;
     user-select: none;
 
@@ -26,7 +29,10 @@
     }
 
     &--primary {
-        color: #fff;
         background: var(--color-primary);
+    }
+
+    &--black {
+        background: var(--color-5);
     }
 }

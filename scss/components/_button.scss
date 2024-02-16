@@ -32,6 +32,10 @@
         background: var(--color-primary);
     }
 
+    &--text {
+        background: transparent;
+    }
+
     &--black {
         background: var(--color-5);
     }

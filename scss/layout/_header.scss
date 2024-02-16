@@ -1,8 +1,16 @@
 @use "../abstracts";
 
 .header {
+    position: sticky;
+    z-index: 98;
     background: var(--color-bg);
-    padding: 37px 10px;
+    padding: 37px 0 10px;
+    top: -27px;
+
+    @include abstracts.screen(lg) {
+        padding-bottom: 20px;
+        top: -17px;
+    }
 }
 
 .top-bar {

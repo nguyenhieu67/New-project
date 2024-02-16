@@ -15,7 +15,7 @@
 
 // Hero
 .hero {
-    padding: 52px 10px 100px;
+    padding: 74px 10px 100px;
     background: var(--color-bg);
 
     &__link {
@@ -93,6 +93,11 @@
 
     &__btn {
         min-width: 135px;
+
+        &:hover {
+            opacity: 0.9;
+            cursor: pointer;
+        }
 
         @include abstracts.screen(md) {
             width: 100%;
@@ -237,6 +242,10 @@
         &__link {
             margin-top: 38px;
             max-width: 166px;
+
+            &:hover {
+                opacity: 0.9;
+            }
         }
     }
 }
@@ -378,6 +387,10 @@
 
     &-content__link {
         max-width: 212px;
+
+        &:hover {
+            opacity: 0.9;
+        }
     }
 }
 
@@ -399,10 +412,6 @@
 
     @include abstracts.screen(lg) {
         margin-top: 70px;
-        height: 470px;
-    }
-
-    @include abstracts.screen(lg) {
         height: 410px;
     }
 
@@ -537,7 +546,11 @@
         justify-content: center;
 
         @include abstracts.screen(md) {
-            margin-top: -110px;
+            margin-top: -100px;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-top: -80px;
         }
     }
 
@@ -654,6 +667,11 @@
         }
 
         &-btn {
+            &:hover {
+                opacity: 0.9;
+                cursor: pointer;
+            }
+
             @include abstracts.screen(lg) {
                 width: 100%;
             }

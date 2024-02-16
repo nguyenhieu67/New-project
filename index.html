@@ -410,14 +410,16 @@
             <!-- CTA -->
             <!-- CTA top -->
             <div class="flavour">
-                <div class="flavour-content">
-                    <h2 class="section__heading">
-                        Find your flavour even faster
-                    </h2>
-                    <p class="section__desc flavour__desc">
-                        Download the Just Eat app for faster ordering and more
-                        personalised recommendations.
-                    </p>
+                <div class="container">
+                    <div class="flavour-content">
+                        <h2 class="section__heading">
+                            Find your flavour even faster
+                        </h2>
+                        <p class="section__desc flavour__desc">
+                            Download the Just Eat app for faster ordering and
+                            more personalised recommendations.
+                        </p>
+                    </div>
                 </div>
                 <div class="flavour-media d-lg-none">
                     <img
@@ -460,16 +462,20 @@
                     </div>
 
                     <div class="app">
-                        <img
-                            src="./assets/icons/google-play.svg"
-                            alt=""
-                            class="app-icon"
-                        />
-                        <img
-                            src="./assets/icons/appstore.svg"
-                            alt=""
-                            class="app-icon"
-                        />
+                        <a href="#!">
+                            <img
+                                src="./assets/icons/google-play.svg"
+                                alt=""
+                                class="app-icon"
+                            />
+                        </a>
+                        <a href="#!">
+                            <img
+                                src="./assets/icons/appstore.svg"
+                                alt=""
+                                class="app-icon"
+                            />
+                        </a>
                     </div>
                 </div>
 
@@ -1246,5 +1252,54 @@
         <script>
             load("#footer", "./templates/footer.html");
         </script>
+
+        <!-- Modal  -->
+        <div id="delete-confirm" class="modal">
+            <div class="modal__content">
+                <button
+                    class="modal__close js-toggle"
+                    toggle-target="#delete-confirm"
+                >
+                    &times;
+                </button>
+                <div class="modal__thumb">
+                    <img
+                        src="./assets/img/modal/modal-img.png"
+                        alt=""
+                        class="modal__img"
+                    />
+                </div>
+                <span class="modal__unlock">UNLOCK</span>
+                <span class="modal__off">$5 OFF</span>
+                <span class="modal__order">Your Order</span>
+                <div class="modal-form__info">
+                    <label for="birthday" class="modal-form__info-title">
+                        Enter your birthday
+                    </label>
+                    <form action="" class="modal__form">
+                        <input
+                            type="text"
+                            name="birthday"
+                            id=""
+                            class="modal__form-input"
+                            placeholder="MM/DD/YYYY"
+                        />
+                        <input
+                            type="email"
+                            name=""
+                            id=""
+                            class="modal__form-input"
+                            placeholder="Enter your email"
+                        />
+
+                        <button class="btn btn--primary">Continue</button>
+                    </form>
+                </div>
+            </div>
+            <div
+                class="modal__overlay js-toggle"
+                toggle-target="#delete-confirm"
+            ></div>
+        </div>
     </body>
 </html>

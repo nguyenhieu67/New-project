@@ -1,0 +1,150 @@
+@use "../abstracts";
+
+%fill-screen {
+    position: fixed;
+    inset: 0;
+}
+
+.modal {
+    @extend %fill-screen;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+    visibility: visible;
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity, visibility;
+        transition-duration: 0.3s;
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        opacity: 1;
+
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: #fff;
+
+        font-size: 3.5rem;
+        color: var(--color-primary);
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &__overlay {
+        @extend %fill-screen;
+        background: rgba($color: #000000, $alpha: 0.4);
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 500px;
+
+        @include abstracts.screen(lg) {
+            width: 400px;
+        }
+
+        @include abstracts.screen(md) {
+            width: 340px;
+        }
+
+        border-radius: 12px;
+        background: #fff;
+    }
+
+    &__thumb {
+        position: relative;
+        padding-top: 40%;
+
+        @include abstracts.screen(md) {
+            padding-top: 50%;
+        }
+
+        width: 100%;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    &-form__info {
+        margin: 20px 0;
+        width: 100%;
+        padding: 0 30px;
+
+        &-title {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+            line-height: 1.71;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include abstracts.screen(lg) {
+            gap: 15px;
+        }
+
+        &-input {
+            padding: 0 15px;
+            height: 60px;
+            border: 1px solid var(--color-8);
+            border-radius: 6px;
+            color: var(--color-5);
+        }
+    }
+
+    &__unlock,
+    &__order {
+        font-size: 2.2rem;
+        line-height: 1.333;
+        font-weight: 700;
+    }
+
+    &__unlock {
+        margin-top: 18px;
+        color: var(--color-warning);
+    }
+
+    &__off {
+        margin: 18px 0;
+        font-size: 6rem;
+        font-weight: 600;
+        color: var(--color-5);
+
+        @include abstracts.screen(lg) {
+            margin: 14px 0;
+            font-size: 4rem;
+        }
+    }
+
+    &__order {
+        color: var(--color-like);
+    }
+}

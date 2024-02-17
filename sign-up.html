@@ -142,7 +142,7 @@
         </main>
 
         <!-- Sign up modal -->
-        <div class="sign-up">
+        <div id="delete-confirm" class="sign-up">
             <div class="sign-up__content">
                 <h1 class="sign-up__heading">Sign Up</h1>
                 <div class="sign-up__continue">
@@ -219,7 +219,10 @@
                     <span class="sign-up__link--bold">Sign In</span>
                 </a>
             </div>
-            <div class="sign-up__overlay"></div>
+            <div
+                class="sign-up__overlay js-toggle"
+                toggle-target="#delete-confirm"
+            ></div>
         </div>
     </body>
 </html>

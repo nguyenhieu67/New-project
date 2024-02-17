@@ -141,8 +141,8 @@
             </div>
         </main>
 
-        <!-- Sign up modal -->
-        <div class="sign-up">
+        <!-- Sign in modal -->
+        <div id="delete-confirm" class="sign-up">
             <div class="sign-up__content">
                 <h1 class="sign-up__heading">Sign In</h1>
                 <div class="sign-up__continue">
@@ -201,12 +201,15 @@
 
                     <button class="form-btn btn btn--primary">Sign In</button>
                 </form>
-                <a href="./sign-in.html" class="sign-up__link">
+                <a href="./sign-up.html" class="sign-up__link">
                     Don’t a have account?
                     <span class="sign-up__link--bold">Sign Up</span>
                 </a>
             </div>
-            <div class="sign-up__overlay"></div>
+            <div
+                class="sign-up__overlay js-toggle"
+                toggle-target="#delete-confirm"
+            ></div>
         </div>
     </body>
 </html>

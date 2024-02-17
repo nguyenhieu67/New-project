@@ -7,13 +7,21 @@
     justify-content: center;
     margin-top: 50px;
 
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__thumb {
         position: relative;
+        padding-top: 22%;
         left: 50%;
         translate: -50% 0;
-        padding-top: 56%;
+        height: 264px;
 
-        max-width: 318px;
+        @include abstracts.screen(md) {
+            height: 150px;
+        }
     }
 
     &__img {
@@ -43,11 +51,7 @@
 }
 
 .go-to-home {
-    display: flex;
-    justify-content: center;
+    align-self: center;
     margin-top: 38px;
-
-    &__btn {
-        min-width: 172px;
-    }
+    width: 172px;
 }

@@ -17,10 +17,45 @@
 .navbar {
     &__list {
         display: flex;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:hover .showdown {
+            display: flex;
+        }
+
+        &:hover .navbar__link-icon {
+            @include abstracts.screen(md) {
+                margin-bottom: -5px;
+                rotate: 0deg;
+            }
+        }
     }
 
     &__link {
         padding: 0 24px;
+
+        &-icon {
+            margin-bottom: 2px;
+
+            @include abstracts.screen(md) {
+                rotate: -90deg;
+                transition: rotate margin-bottom;
+                transition-duration: 0.25s;
+            }
+        }
+
+        @include abstracts.screen(md) {
+            font-size: 2rem;
+            font-weight: 600;
+        }
     }
 }
 
@@ -41,5 +76,70 @@
         min-width: 107px;
         height: 44px;
         margin-left: 15px;
+    }
+}
+
+.showdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 24px;
+    padding-top: 40px;
+
+    @include abstracts.screen(md) {
+        left: 24px;
+        width: 170px;
+    }
+
+    &__inner {
+        padding: 12px;
+        width: 170px;
+
+        border-radius: 6px;
+        background: #fff;
+        box-shadow: 0px 16px 48px 0px #0067ff12;
+
+        @include abstracts.screen(md) {
+            background: #efe4c8;
+            padding: 12px 30px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__link {
+        white-space: nowrap;
+        line-height: 1.75;
+
+        @include abstracts.screen(md) {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+    }
+}
+
+.menu {
+    &-inner {
+        position: fixed;
+        inset: 58px 0 0 0;
+        display: flex;
+        justify-content: center;
+
+        padding-top: 30px;
+        background: var(--color-bg);
+
+        opacity: 0;
+        visibility: hidden;
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity, visibility;
+            transition-duration: 0.3s;
+        }
     }
 }

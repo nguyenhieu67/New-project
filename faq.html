@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FOODEATS | FAQ</title>
+
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./assets/favicon//apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="./assets/favicon/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Embed Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Serif:opsz,wght@8..144,600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Scripts -->
+        <script src="./assets/js/main.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header.html");
+        </script>
+
+        <!-- Main -->
+        <main>
+            <div class="container">
+                <div class="contact faq">
+                    <h2 class="contact__heading section__heading">
+                        Most asked questions by our beloved customers
+                    </h2>
+                    <div class="co-soon__thumb contact__thumb">
+                        <img
+                            src="./assets/img/common/faq.png"
+                            alt=""
+                            class="co-soon__img"
+                        />
+                    </div>
+
+                    <!-- FAQ item 1 -->
+                    <div class="faq-content faq-content--active">
+                        <label class="faq-content__label">
+                            What is FoodEats?
+                            <input
+                                type="checkbox"
+                                name=""
+                                id=""
+                                checked
+                                class="faq-content__checkbox"
+                            />
+                        </label>
+                        <p class="faq-content__desc">
+                            FoodEats is a technology company that provides
+                            logistics services to both vendors and consumers.
+                            This potentially allows food vendors to deliver
+                            meals seamlessly while also providing consumers with
+                            an easy platform to order meals from their favourite
+                            restaurants in their city.
+                        </p>
+                    </div>
+
+                    <!-- FAQ item 2 -->
+                    <div class="faq-content">
+                        <label class="faq-content__label">
+                            What location do we provide service
+                            <input
+                                type="checkbox"
+                                name=""
+                                id=""
+                                class="faq-content__checkbox"
+                            />
+                        </label>
+                        <p hidden class="faq-content__desc"></p>
+                    </div>
+
+                    <!-- FAQ item 3 -->
+                    <div class="faq-content">
+                        <label class="faq-content__label">
+                            What is the delivery fee?
+                            <input
+                                type="checkbox"
+                                name=""
+                                id=""
+                                class="faq-content__checkbox"
+                            />
+                        </label>
+                        <p hidden class="faq-content__desc"></p>
+                    </div>
+
+                    <!-- FAQ item 4 -->
+                    <div class="faq-content">
+                        <label class="faq-content__label">
+                            How I can become a rider?
+                            <input
+                                type="checkbox"
+                                name=""
+                                id=""
+                                class="faq-content__checkbox"
+                            />
+                        </label>
+                        <p hidden class="faq-content__desc"></p>
+                    </div>
+
+                    <!-- FAQ item 5 -->
+                    <div class="faq-content">
+                        <label class="faq-content__label">
+                            How I can become a partner?
+                            <input
+                                type="checkbox"
+                                name=""
+                                id=""
+                                class="faq-content__checkbox"
+                            />
+                        </label>
+                        <p hidden class="faq-content__desc"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+    </body>
+</html>

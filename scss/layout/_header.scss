@@ -4,13 +4,8 @@
     position: sticky;
     z-index: 90;
     background: var(--color-bg);
-    padding: 37px 0 10px;
-    top: -27px;
-
-    @include abstracts.screen(lg) {
-        padding-bottom: 20px;
-        top: -17px;
-    }
+    padding: 20px 0;
+    top: 0;
 }
 
 .top-bar {
@@ -38,6 +33,7 @@
         color: var(--color-5) !important;
         padding: 0 15px;
         min-width: 0;
+        height: inherit;
     }
 
     &__sign-up {

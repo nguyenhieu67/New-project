@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FOODEATS | Blog</title>
+
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./assets/favicon//apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="./assets/favicon/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Embed Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Serif:opsz,wght@8..144,600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Scripts -->
+        <script src="./assets/js/main.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header.html");
+        </script>
+
+        <!-- Main -->
+        <main>
+            <div class="container">
+                <div class="blog">
+                    <section class="blog-header">
+                        <div class="blog-header__content">
+                            <div class="blog-header__time">
+                                <span class="blog-header__time-new"
+                                    >Nove 06, 2022</span
+                                >
+
+                                <span>14 min read</span>
+                            </div>
+                            <h1 class="section__heading">
+                                Most popular vegetarian and vegan restaurants in
+                                your city.
+                            </h1>
+                            <p class="section__desc">
+                                Looking to add more leafy greens and plant-based
+                                burgers to your plate this fall? Today, in
+                                celebration of World Vegetarian Day on October
+                                1, we discover few restaurants for you.
+                            </p>
+                            <div class="blog-header__user">
+                                <img
+                                    src="./assets/img/blog/avatar/avatar-1.png"
+                                    alt=""
+                                    class="blog-header__user-avatar"
+                                />
+                                <p class="blog-header__user-name">
+                                    David Warner
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="blog-header__media">
+                            <div class="blog-header__thumb">
+                                <img
+                                    src="./assets/img/blog/images/blog-img-1.png"
+                                    alt=""
+                                    class="blog-header__img"
+                                />
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="blog-search">
+                        <ul class="blog-search__list">
+                            <li>
+                                <a
+                                    href="#!"
+                                    class="blog-search__link blog-search__link--current"
+                                >
+                                    All
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!" class="blog-search__link">
+                                    Recent
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!" class="blog-search__link">
+                                    Popular
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!" class="blog-search__link">
+                                    Oldest
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="blog-search__right">
+                            <div class="blog-search__wrap">
+                                <img
+                                    src="./assets/icons/search.svg"
+                                    alt=""
+                                    class="blog-search__icon"
+                                />
+                                <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="blog-search__input"
+                                    placeholder="Search the blog..."
+                                />
+                            </div>
+                            <button class="blog-search__btn btn btn--primary">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="blog-body">
+                        <div
+                            class="row row-cols-3 row-cols-lg-2 row-cols-md-1 gy-3 gy-md-1"
+                        >
+                            <!-- Blog item 1 -->
+                            <div class="col">
+                                <section class="blog-item">
+                                    <div class="blog-header__thumb">
+                                        <img
+                                            src="./assets/img/blog/images/blog-item-1.png"
+                                            alt=""
+                                            class="blog-header__img"
+                                        />
+                                    </div>
+                                    <div class="blog-item__content">
+                                        <div
+                                            class="blog-header__time blog-item__time"
+                                        >
+                                            <span class="blog-header__time-new"
+                                                >Nove 06, 2022</span
+                                            >
+
+                                            <span>14 min read</span>
+                                        </div>
+                                        <h3 class="blog-item__heading">
+                                            Most popular vegetarian and vegan
+                                            restaurants in your city.
+                                        </h3>
+                                        <p class="blog-item__desc">
+                                            Looking to add more leafy greens and
+                                            plant-based burgers to your plate
+                                            this fall? Today, in celebration of
+                                            World...
+                                        </p>
+                                        <div
+                                            class="blog-header__user blog-item__user"
+                                        >
+                                            <img
+                                                src="./assets/img/blog/avatar/avatar-1.png"
+                                                alt=""
+                                                class="blog-header__user-avatar"
+                                            />
+                                            <p class="blog-header__user-name">
+                                                David Warner
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Blog item 2 -->
+                            <div class="col">
+                                <section class="blog-item">
+                                    <div class="blog-header__thumb">
+                                        <img
+                                            src="./assets/img/blog/images/blog-item-2.png"
+                                            alt=""
+                                            class="blog-header__img"
+                                        />
+                                    </div>
+                                    <div class="blog-item__content">
+                                        <div
+                                            class="blog-header__time blog-item__time"
+                                        >
+                                            <span class="blog-header__time-new"
+                                                >Nove 06, 2022</span
+                                            >
+
+                                            <span>14 min read</span>
+                                        </div>
+                                        <h3 class="blog-item__heading">
+                                            Most popular vegetarian and vegan
+                                            restaurants in your city.
+                                        </h3>
+                                        <p class="blog-item__desc">
+                                            Looking to add more leafy greens and
+                                            plant-based burgers to your plate
+                                            this fall? Today, in celebration of
+                                            World...
+                                        </p>
+                                        <div
+                                            class="blog-header__user blog-item__user"
+                                        >
+                                            <img
+                                                src="./assets/img/blog/avatar/avatar-2.jpg"
+                                                alt=""
+                                                class="blog-header__user-avatar"
+                                            />
+                                            <p class="blog-header__user-name">
+                                                David Warner
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Blog item 3 -->
+                            <div class="col">
+                                <section class="blog-item">
+                                    <div class="blog-header__thumb">
+                                        <img
+                                            src="./assets/img/blog/images/blog-item-3.png"
+                                            alt=""
+                                            class="blog-header__img"
+                                        />
+                                    </div>
+                                    <div class="blog-item__content">
+                                        <div
+                                            class="blog-header__time blog-item__time"
+                                        >
+                                            <span class="blog-header__time-new"
+                                                >Nove 06, 2022</span
+                                            >
+
+                                            <span>14 min read</span>
+                                        </div>
+                                        <h3 class="blog-item__heading">
+                                            Most popular vegetarian and vegan
+                                            restaurants in your city.
+                                        </h3>
+                                        <p class="blog-item__desc">
+                                            Looking to add more leafy greens and
+                                            plant-based burgers to your plate
+                                            this fall? Today, in celebration of
+                                            World...
+                                        </p>
+                                        <div
+                                            class="blog-header__user blog-item__user"
+                                        >
+                                            <img
+                                                src="./assets/img/blog/avatar/avatar-3.jpg"
+                                                alt=""
+                                                class="blog-header__user-avatar"
+                                            />
+                                            <p class="blog-header__user-name">
+                                                David Warner
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Blog item 4 -->
+                            <div class="col">
+                                <section class="blog-item">
+                                    <div class="blog-header__thumb">
+                                        <img
+                                            src="./assets/img/blog/images/blog-item-4.png"
+                                            alt=""
+                                            class="blog-header__img"
+                                        />
+                                    </div>
+                                    <div class="blog-item__content">
+                                        <div
+                                            class="blog-header__time blog-item__time"
+                                        >
+                                            <span class="blog-header__time-new"
+                                                >Nove 06, 2022</span
+                                            >
+
+                                            <span>14 min read</span>
+                                        </div>
+                                        <h3 class="blog-item__heading">
+                                            Most popular vegetarian and vegan
+                                            restaurants in your city.
+                                        </h3>
+                                        <p class="blog-item__desc">
+                                            Looking to add more leafy greens and
+                                            plant-based burgers to your plate
+                                            this fall? Today, in celebration of
+                                            World...
+                                        </p>
+                                        <div
+                                            class="blog-header__user blog-item__user"
+                                        >
+                                            <img
+                                                src="./assets/img/blog/avatar/avatar-4.jpg"
+                                                alt=""
+                                                class="blog-header__user-avatar"
+                                            />
+                                            <p class="blog-header__user-name">
+                                                David Warner
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Blog item 5 -->
+                            <div class="col">
+                                <section class="blog-item">
+                                    <div class="blog-header__thumb">
+                                        <img
+                                            src="./assets/img/blog/images/blog-item-5.png"
+                                            alt=""
+                                            class="blog-header__img"
+                                        />
+                                    </div>
+                                    <div class="blog-item__content">
+                                        <div
+                                            class="blog-header__time blog-item__time"
+                                        >
+                                            <span class="blog-header__time-new"
+                                                >Nove 06, 2022</span
+                                            >
+
+                                            <span>14 min read</span>
+                                        </div>
+                                        <h3 class="blog-item__heading">
+                                            Most popular vegetarian and vegan
+                                            restaurants in your city.
+                                        </h3>
+                                        <p class="blog-item__desc">
+                                            Looking to add more leafy greens and
+                                            plant-based burgers to your plate
+                                            this fall? Today, in celebration of
+                                            World...
+                                        </p>
+                                        <div
+                                            class="blog-header__user blog-item__user"
+                                        >
+                                            <img
+                                                src="./assets/img/blog/avatar/avatar-5.jpg"
+                                                alt=""
+                                                class="blog-header__user-avatar"
+                                            />
+                                            <p class="blog-header__user-name">
+                                                David Warner
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Blog item 6 -->
+                            <div class="col">
+                                <section class="blog-item">
+                                    <div class="blog-header__thumb">
+                                        <img
+                                            src="./assets/img/blog/images/blog-item-6.png"
+                                            alt=""
+                                            class="blog-header__img"
+                                        />
+                                    </div>
+                                    <div class="blog-item__content">
+                                        <div
+                                            class="blog-header__time blog-item__time"
+                                        >
+                                            <span class="blog-header__time-new"
+                                                >Nove 06, 2022</span
+                                            >
+
+                                            <span>14 min read</span>
+                                        </div>
+                                        <h3 class="blog-item__heading">
+                                            Most popular vegetarian and vegan
+                                            restaurants in your city.
+                                        </h3>
+                                        <p class="blog-item__desc">
+                                            Looking to add more leafy greens and
+                                            plant-based burgers to your plate
+                                            this fall? Today, in celebration of
+                                            World...
+                                        </p>
+                                        <div
+                                            class="blog-header__user blog-item__user"
+                                        >
+                                            <img
+                                                src="./assets/img/blog/avatar/avatar-6.jpg"
+                                                alt=""
+                                                class="blog-header__user-avatar"
+                                            />
+                                            <p class="blog-header__user-name">
+                                                David Warner
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Blog item 7 -->
+                            <div class="col">
+                                <section class="blog-item">
+                                    <div class="blog-header__thumb">
+                                        <img
+                                            src="./assets/img/blog/images/blog-item-7.png"
+                                            alt=""
+                                            class="blog-header__img"
+                                        />
+                                    </div>
+                                    <div class="blog-item__content">
+                                        <div
+                                            class="blog-header__time blog-item__time"
+                                        >
+                                            <span class="blog-header__time-new"
+                                                >Nove 06, 2022</span
+                                            >
+
+                                            <span>14 min read</span>
+                                        </div>
+                                        <h3 class="blog-item__heading">
+                                            Most popular vegetarian and vegan
+                                            restaurants in your city.
+                                        </h3>
+                                        <p class="blog-item__desc">
+                                            Looking to add more leafy greens and
+                                            plant-based burgers to your plate
+                                            this fall? Today, in celebration of
+                                            World...
+                                        </p>
+                                        <div
+                                            class="blog-header__user blog-item__user"
+                                        >
+                                            <img
+                                                src="./assets/img/blog/avatar/avatar-7.jpg"
+                                                alt=""
+                                                class="blog-header__user-avatar"
+                                            />
+                                            <p class="blog-header__user-name">
+                                                David Warner
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Blog item 8 -->
+                            <div class="col">
+                                <section class="blog-item">
+                                    <div class="blog-header__thumb">
+                                        <img
+                                            src="./assets/img/blog/images/blog-item-8.png"
+                                            alt=""
+                                            class="blog-header__img"
+                                        />
+                                    </div>
+                                    <div class="blog-item__content">
+                                        <div
+                                            class="blog-header__time blog-item__time"
+                                        >
+                                            <span class="blog-header__time-new"
+                                                >Nove 06, 2022</span
+                                            >
+
+                                            <span>14 min read</span>
+                                        </div>
+                                        <h3 class="blog-item__heading">
+                                            Most popular vegetarian and vegan
+                                            restaurants in your city.
+                                        </h3>
+                                        <p class="blog-item__desc">
+                                            Looking to add more leafy greens and
+                                            plant-based burgers to your plate
+                                            this fall? Today, in celebration of
+                                            World...
+                                        </p>
+                                        <div
+                                            class="blog-header__user blog-item__user"
+                                        >
+                                            <img
+                                                src="./assets/img/blog/avatar/avatar-8.jpg"
+                                                alt=""
+                                                class="blog-header__user-avatar"
+                                            />
+                                            <p class="blog-header__user-name">
+                                                David Warner
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Blog item 9 -->
+                            <div class="col">
+                                <section class="blog-item">
+                                    <div class="blog-header__thumb">
+                                        <img
+                                            src="./assets/img/blog/images/blog-item-9.png"
+                                            alt=""
+                                            class="blog-header__img"
+                                        />
+                                    </div>
+                                    <div class="blog-item__content">
+                                        <div
+                                            class="blog-header__time blog-item__time"
+                                        >
+                                            <span class="blog-header__time-new"
+                                                >Nove 06, 2022</span
+                                            >
+
+                                            <span>14 min read</span>
+                                        </div>
+                                        <h3 class="blog-item__heading">
+                                            Most popular vegetarian and vegan
+                                            restaurants in your city.
+                                        </h3>
+                                        <p class="blog-item__desc">
+                                            Looking to add more leafy greens and
+                                            plant-based burgers to your plate
+                                            this fall? Today, in celebration of
+                                            World...
+                                        </p>
+                                        <div
+                                            class="blog-header__user blog-item__user"
+                                        >
+                                            <img
+                                                src="./assets/img/blog/avatar/avatar-9.jpg"
+                                                alt=""
+                                                class="blog-header__user-avatar"
+                                            />
+                                            <p class="blog-header__user-name">
+                                                David Warner
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Blog item 10 -->
+                            <div class="col">
+                                <section class="blog-item">
+                                    <div class="blog-header__thumb">
+                                        <img
+                                            src="./assets/img/blog/images/blog-item-10.png"
+                                            alt=""
+                                            class="blog-header__img"
+                                        />
+                                    </div>
+                                    <div class="blog-item__content">
+                                        <div
+                                            class="blog-header__time blog-item__time"
+                                        >
+                                            <span class="blog-header__time-new"
+                                                >Nove 06, 2022</span
+                                            >
+
+                                            <span>14 min read</span>
+                                        </div>
+                                        <h3 class="blog-item__heading">
+                                            Most popular vegetarian and vegan
+                                            restaurants in your city.
+                                        </h3>
+                                        <p class="blog-item__desc">
+                                            Looking to add more leafy greens and
+                                            plant-based burgers to your plate
+                                            this fall? Today, in celebration of
+                                            World...
+                                        </p>
+                                        <div
+                                            class="blog-header__user blog-item__user"
+                                        >
+                                            <img
+                                                src="./assets/img/blog/avatar/avatar-10.jpg"
+                                                alt=""
+                                                class="blog-header__user-avatar"
+                                            />
+                                            <p class="blog-header__user-name">
+                                                David Warner
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Blog item 11 -->
+                            <div class="col">
+                                <section class="blog-item">
+                                    <div class="blog-header__thumb">
+                                        <img
+                                            src="./assets/img/blog/images/blog-item-11.png"
+                                            alt=""
+                                            class="blog-header__img"
+                                        />
+                                    </div>
+                                    <div class="blog-item__content">
+                                        <div
+                                            class="blog-header__time blog-item__time"
+                                        >
+                                            <span class="blog-header__time-new"
+                                                >Nove 06, 2022</span
+                                            >
+
+                                            <span>14 min read</span>
+                                        </div>
+                                        <h3 class="blog-item__heading">
+                                            Most popular vegetarian and vegan
+                                            restaurants in your city.
+                                        </h3>
+                                        <p class="blog-item__desc">
+                                            Looking to add more leafy greens and
+                                            plant-based burgers to your plate
+                                            this fall? Today, in celebration of
+                                            World...
+                                        </p>
+                                        <div
+                                            class="blog-header__user blog-item__user"
+                                        >
+                                            <img
+                                                src="./assets/img/blog/avatar/avatar-11.jpg"
+                                                alt=""
+                                                class="blog-header__user-avatar"
+                                            />
+                                            <p class="blog-header__user-name">
+                                                David Warner
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Blog item 12 -->
+                            <div class="col">
+                                <section class="blog-item">
+                                    <div class="blog-header__thumb">
+                                        <img
+                                            src="./assets/img/blog/images/blog-img-1.png"
+                                            alt=""
+                                            class="blog-header__img"
+                                        />
+                                    </div>
+                                    <div class="blog-item__content">
+                                        <div
+                                            class="blog-header__time blog-item__time"
+                                        >
+                                            <span class="blog-header__time-new"
+                                                >Nove 06, 2022</span
+                                            >
+
+                                            <span>14 min read</span>
+                                        </div>
+                                        <h3 class="blog-item__heading">
+                                            Most popular vegetarian and vegan
+                                            restaurants in your city.
+                                        </h3>
+                                        <p class="blog-item__desc">
+                                            Looking to add more leafy greens and
+                                            plant-based burgers to your plate
+                                            this fall? Today, in celebration of
+                                            World...
+                                        </p>
+                                        <div
+                                            class="blog-header__user blog-item__user"
+                                        >
+                                            <img
+                                                src="./assets/img/blog/avatar/avatar-12.jpg"
+                                                alt=""
+                                                class="blog-header__user-avatar"
+                                            />
+                                            <p class="blog-header__user-name">
+                                                David Warner
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+    </body>
+</html>

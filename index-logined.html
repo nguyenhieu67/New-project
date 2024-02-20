@@ -67,7 +67,6 @@
                 content: url(./assets/img/category/arrow-down-1.svg);
                 top: 15px;
                 right: 15px;
-                transition: rotate 0.2s;
             }
 
             /* Point the arrow upwards when the select box is open (active): */
@@ -80,7 +79,7 @@
             .select-items div,
             .select-selected {
                 color: var(--color-5);
-                padding: 15px;
+                padding: 20px;
                 border: 1px solid transparent;
 
                 cursor: pointer;
@@ -185,26 +184,35 @@
                                             </div>
                                             <div class="filter-menu__wrap">
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
+                                                        checked
                                                     />
-                                                    Special Deals
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >Special Deals</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    Special Deals
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >Top Eats</span
+                                                    >
                                                 </label>
                                             </div>
                                         </div>
@@ -221,81 +229,109 @@
                                             </div>
                                             <div class="filter-menu__wrap">
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    $0-$10
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >$0-$10</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    $10-$20
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >$10-$20</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    $20-$30
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >$20-$30</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    $30-$40
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >$30-$40</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    $40-$50
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >$40-$50</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    $50-$100
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >$50-$100</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    $100-$100+
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >$100-$100+</span
+                                                    >
                                                 </label>
                                             </div>
                                         </div>
@@ -312,37 +348,49 @@
                                             </div>
                                             <div class="filter-menu__wrap">
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    $0-$2
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >$0-$2</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    $3-$6
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >$3-$6</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    $6-$9+
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >$6-$9+</span
+                                                    >
                                                 </label>
                                             </div>
                                         </div>
@@ -359,15 +407,19 @@
                                             </div>
                                             <div class="filter-menu__wrap">
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    1.0
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >1.0</span
+                                                    >
                                                     <div
                                                         class="filter-menu__checkbox-icon"
                                                     >
@@ -377,39 +429,21 @@
                                                         />
                                                     </div>
                                                 </label>
+
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    2.0
-                                                    <div
-                                                        class="filter-menu__checkbox-icon"
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >2.0</span
                                                     >
-                                                        <img
-                                                            src="./assets/icons/star.svg"
-                                                            alt=""
-                                                        />
-                                                        <img
-                                                            src="./assets/icons/star.svg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                </label>
-                                                <label
-                                                    class="filter-menu__label"
-                                                >
-                                                    <input
-                                                        type="checkbox"
-                                                        name=""
-                                                        id=""
-                                                        class="filter-menu__checkbox"
-                                                    />
-                                                    3.0
                                                     <div
                                                         class="filter-menu__checkbox-icon"
                                                     >
@@ -421,22 +455,22 @@
                                                             src="./assets/icons/star.svg"
                                                             alt=""
                                                         />
-                                                        <img
-                                                            src="./assets/icons/star.svg"
-                                                            alt=""
-                                                        />
                                                     </div>
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    4.0
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >3.0</span
+                                                    >
                                                     <div
                                                         class="filter-menu__checkbox-icon"
                                                     >
@@ -452,6 +486,37 @@
                                                             src="./assets/icons/star.svg"
                                                             alt=""
                                                         />
+                                                    </div>
+                                                </label>
+                                                <label
+                                                    class="filter-menu__checkbox"
+                                                >
+                                                    <input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
+                                                    />
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >4.0</span
+                                                    >
+                                                    <div
+                                                        class="filter-menu__checkbox-icon"
+                                                    >
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
                                                         <img
                                                             src="./assets/icons/star.svg"
                                                             alt=""
@@ -459,15 +524,19 @@
                                                     </div>
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    5.0
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >5.0</span
+                                                    >
                                                     <div
                                                         class="filter-menu__checkbox-icon"
                                                     >
@@ -508,59 +577,79 @@
                                             </div>
                                             <div class="filter-menu__wrap">
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    Anytime
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >Anytime</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    15 min
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >15 min</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    30 min
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >30 min</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    45 min
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >45 min</span
+                                                    >
                                                 </label>
                                                 <label
-                                                    class="filter-menu__label"
+                                                    class="filter-menu__checkbox"
                                                 >
                                                     <input
                                                         type="checkbox"
                                                         name=""
                                                         id=""
-                                                        class="filter-menu__checkbox"
+                                                        class="filter-menu__checkbox-input"
+                                                        hidden
                                                     />
-                                                    60 min
+                                                    <span
+                                                        class="filter-menu__checkbox-label"
+                                                        >60 min</span
+                                                    >
                                                 </label>
                                             </div>
                                         </div>
@@ -714,7 +803,8 @@
                                             <img
                                                 src="./assets/icons/arrow-down.svg"
                                                 alt=""
-                                                class="category__ops-menu--icon"
+                                                class="category__ops-menu--icon js-toggle"
+                                                toggle-target="#open-option"
                                             />
                                         </div>
                                         <span
@@ -724,7 +814,8 @@
                                         </span>
 
                                         <div
-                                            class="category__ops-wrap d-lg-none"
+                                            id="open-option"
+                                            class="category__ops-wrap hide d-lg-none"
                                         >
                                             <div
                                                 class="custom-select"
@@ -1946,12 +2037,12 @@
                 b.setAttribute("class", "select-items select-hide");
                 for (j = 1; j < ll; j++) {
                     /* For each option in the original select element,
-    create a new DIV that will act as an option item: */
+                create a new DIV that will act as an option item: */
                     c = document.createElement("DIV");
                     c.innerHTML = selElmnt.options[j].innerHTML;
                     c.addEventListener("click", function (e) {
                         /* When an item is clicked, update the original select box,
-        and the selected item: */
+                    and the selected item: */
                         var y, i, k, s, h, sl, yl;
                         s =
                             this.parentNode.parentNode.getElementsByTagName(
@@ -1982,7 +2073,7 @@
                 x[i].appendChild(b);
                 a.addEventListener("click", function (e) {
                     /* When the select box is clicked, close any other select boxes,
-    and open/close the current select box: */
+                and open/close the current select box: */
                     e.stopPropagation();
                     closeAllSelect(this);
                     this.nextSibling.classList.toggle("select-hide");
@@ -1992,7 +2083,7 @@
 
             function closeAllSelect(elmnt) {
                 /* A function that will close all select boxes in the document,
-  except the current select box: */
+              except the current select box: */
                 var x,
                     y,
                     i,
@@ -2018,7 +2109,7 @@
             }
 
             /* If the user clicks anywhere outside the select box,
-then close all select boxes: */
+            then close all select boxes: */
             document.addEventListener("click", closeAllSelect);
         </script>
     </body>

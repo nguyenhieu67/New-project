@@ -82,7 +82,7 @@
             }
 
             @include abstracts.screen(lg) {
-                width: 270px;
+                width: 250px;
             }
 
             &::before {
@@ -98,9 +98,8 @@
                 @include abstracts.screen(xl) {
                     width: 100px;
                 }
-
                 @include abstracts.screen(lg) {
-                    width: 135px;
+                    width: 125px;
                 }
             }
         }
@@ -122,7 +121,7 @@
             }
 
             @include abstracts.screen(lg) {
-                padding: 0 30px;
+                padding: 0 28px;
             }
         }
     }
@@ -174,28 +173,35 @@
             gap: 18px;
         }
 
-        &__label {
+        &__checkbox {
+            position: relative;
             display: flex;
             align-items: center;
             user-select: none;
-        }
 
-        &__checkbox {
-            margin: 0;
-            margin-right: 12px;
-            width: 16px;
-            height: 16px;
-
-            &:checked::before {
-                position: relative;
-                top: -1px;
-                content: url(../../assets/icons/checkbox.svg);
+            &-label {
+                margin-left: 28px;
             }
 
-            &-icon {
-                display: flex;
-                gap: 6px;
-                margin-left: 6px;
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+            }
+
+            &::before {
+                top: 0;
+                width: 16px;
+                height: 16px;
+                border-radius: 2px;
+                border: 1px solid var(--color-text);
+            }
+        }
+
+        &__checkbox:has(:checked) {
+            &::after {
+                content: url(../../assets/icons/checkbox.svg);
+                top: -1px;
             }
         }
     }
@@ -250,7 +256,7 @@
     }
 
     @include abstracts.screen(sm) {
-        width: 90%;
+        width: 80%;
     }
 }
 
@@ -342,6 +348,7 @@
     }
 
     &__ops {
+        position: relative;
         display: flex;
         align-items: center;
         gap: 12px;
@@ -358,6 +365,19 @@
             height: 60px;
             border: 1px solid var(--color-text);
             border-radius: 6px;
+
+            &--icon {
+                padding: 20px;
+            }
+        }
+
+        &-wrap {
+            @include abstracts.screen(lg) {
+                position: absolute;
+                z-index: 99;
+                top: 60px;
+                right: 0;
+            }
         }
     }
 

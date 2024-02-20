@@ -82,6 +82,10 @@
         min-width: 107px;
         height: 44px;
         font-size: initial;
+
+        @include abstracts.screen(lg) {
+            min-width: 80px;
+        }
     }
 }
 
@@ -118,6 +122,8 @@
     }
 
     &__link {
+        display: block;
+
         white-space: nowrap;
         line-height: 1.75;
 

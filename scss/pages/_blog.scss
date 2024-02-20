@@ -1,0 +1,205 @@
+@use "../abstracts";
+
+.blog {
+    margin: 55px 0 160px;
+
+    @include abstracts.screen(md) {
+        margin: 30px 0 70px;
+    }
+    &-header {
+        display: flex;
+        justify-content: space-between;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+        }
+
+        &__content {
+            flex-shrink: 0;
+            width: 49%;
+
+            @include abstracts.screen(md) {
+                width: 100%;
+            }
+        }
+
+        &__time {
+            display: flex;
+            margin-bottom: 18px;
+
+            font-size: 1.8rem;
+            line-height: 1.67;
+
+            &-new {
+                display: flex;
+                &::after {
+                    content: "";
+                    margin: 6px 16px;
+                    width: 1px;
+                    background: var(--color-text);
+                }
+            }
+        }
+
+        &__media {
+            width: 40%;
+            @include abstracts.screen(md) {
+                margin-top: 30px;
+                width: 100%;
+            }
+        }
+
+        &__thumb {
+            position: relative;
+            padding-top: 100%;
+            border-radius: 12px;
+        }
+
+        &__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: inherit;
+        }
+
+        &__user {
+            margin-top: 38px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            &-avatar {
+                width: 54px;
+                height: 54px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            &-name {
+                font-size: 1.8rem;
+                line-height: 1.67;
+                font-weight: 600;
+                color: var(--color-5);
+            }
+        }
+    }
+
+    &-search {
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            margin-top: 30px;
+        }
+
+        &__list {
+            display: flex;
+            margin-left: -15px;
+
+            @include abstracts.screen(md) {
+                align-self: flex-start;
+            }
+        }
+
+        &__link {
+            padding: 10px 15px;
+            font-size: 1.8rem;
+            line-height: 1.67;
+
+            &:hover,
+            &--current {
+                font-weight: 600;
+                color: var(--color-primary);
+            }
+        }
+
+        &__right {
+            display: flex;
+            gap: 16px;
+
+            @include abstracts.screen(md) {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+
+        &__wrap {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            width: 378px;
+            height: 60px;
+            border: 1px solid var(--color-text);
+            border-radius: 6px;
+
+            @include abstracts.screen(lg) {
+                width: 200px;
+            }
+
+            @include abstracts.screen(md) {
+                width: 100%;
+            }
+        }
+
+        &__input {
+            width: 100%;
+            height: 100%;
+        }
+
+        &__btn {
+            min-width: 131px;
+
+            @include abstracts.screen(lg) {
+                min-width: 70px;
+            }
+        }
+    }
+
+    &-body {
+        margin-top: 55px;
+    }
+
+    &-item {
+        padding: 20px;
+        border-radius: 12px;
+
+        &:hover {
+            box-shadow: 0px 20px 70px 0px #1b0c5412;
+
+            .blog-item__heading {
+                color: var(--color-primary);
+            }
+        }
+        &__time {
+            margin: 20px 0 16px;
+        }
+
+        &__time,
+        &__desc {
+            font-size: 1.6rem;
+            line-height: 1.75;
+        }
+
+        &__heading {
+            font-size: 2rem;
+            line-height: 1.5;
+            font-weight: 700;
+        }
+
+        &__desc {
+            margin-top: 16px;
+        }
+
+        &__user {
+            margin-top: 30px;
+        }
+    }
+}

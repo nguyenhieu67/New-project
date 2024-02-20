@@ -414,9 +414,6 @@
 // Flavour
 .flavour {
     position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 
     margin-top: 160px;
     height: 695px;
@@ -433,10 +430,13 @@
     }
 
     &-content {
-        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 100px;
 
         @include abstracts.screen(lg) {
-            margin-top: 50px;
+            padding-top: 50px;
         }
     }
 

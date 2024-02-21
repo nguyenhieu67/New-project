@@ -526,6 +526,14 @@
         flex-shrink: 0;
     }
 
+    &__col {
+        width: calc(100% / 3);
+
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
+    }
+
     &-top {
         display: flex;
         align-items: center;
@@ -534,12 +542,14 @@
 
     &__item {
         position: relative;
-        margin-top: 69px;
+        margin-top: 15px;
         padding: 30px 20px;
         border-radius: 12px;
         background: #fff;
 
         &:hover {
+            box-shadow: 0px 20px 70px 0px #1b0c5412;
+
             > .blq__icon,
             .blq__name {
                 filter: brightness(0) saturate(100%) invert(13%) sepia(99%)
@@ -554,6 +564,10 @@
         position: absolute;
         top: -14px;
         left: 20px;
+
+        &-star {
+            margin-bottom: 16px;
+        }
     }
 
     &-list__icon {

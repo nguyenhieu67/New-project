@@ -123,7 +123,7 @@
                 <div class="row">
                     <!-- Filters -->
                     <div class="col-3 col-lg-12">
-                        <section id="open-filter" class="filter d-lg-none hide">
+                        <section id="open-filter" class="filter hide">
                             <div class="filter-inner">
                                 <div class="filter-row">
                                     <div class="filter-row__title">
@@ -176,13 +176,18 @@
                                         <!-- Menu item 1 -->
                                         <div class="filter-menu__item">
                                             <div class="filter-menu__title">
-                                                FoodEats
+                                                <span> FoodEats</span>
                                                 <img
                                                     src="./assets/icons/arrow-top.svg"
                                                     alt=""
+                                                    class="filter-menu__item-icon js-toggle"
+                                                    toggle-target="#hd-menu-1"
                                                 />
                                             </div>
-                                            <div class="filter-menu__wrap">
+                                            <div
+                                                id="hd-menu-1"
+                                                class="filter-menu__wrap"
+                                            >
                                                 <label
                                                     class="filter-menu__checkbox"
                                                 >
@@ -216,18 +221,23 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="filter__separate"></div>
+                                        <div class="separate"></div>
 
                                         <!-- Menu item 2 -->
                                         <div class="filter-menu__item">
                                             <div class="filter-menu__title">
-                                                Price
+                                                <span> Price</span>
                                                 <img
                                                     src="./assets/icons/arrow-top.svg"
                                                     alt=""
+                                                    class="filter-menu__item-icon js-toggle"
+                                                    toggle-target="#hd-menu-2"
                                                 />
                                             </div>
-                                            <div class="filter-menu__wrap">
+                                            <div
+                                                id="hd-menu-2"
+                                                class="filter-menu__wrap"
+                                            >
                                                 <label
                                                     class="filter-menu__checkbox"
                                                 >
@@ -335,18 +345,23 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="filter__separate"></div>
+                                        <div class="separate"></div>
 
                                         <!-- Menu item 3 -->
                                         <div class="filter-menu__item">
                                             <div class="filter-menu__title">
-                                                Max Delivery Fee
+                                                <span>Max Delivery Fee</span>
                                                 <img
                                                     src="./assets/icons/arrow-top.svg"
                                                     alt=""
+                                                    class="filter-menu__item-icon js-toggle"
+                                                    toggle-target="#hd-menu-3"
                                                 />
                                             </div>
-                                            <div class="filter-menu__wrap">
+                                            <div
+                                                id="hd-menu-3"
+                                                class="filter-menu__wrap"
+                                            >
                                                 <label
                                                     class="filter-menu__checkbox"
                                                 >
@@ -394,18 +409,23 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="filter__separate"></div>
+                                        <div class="separate"></div>
 
                                         <!-- Menu item 4 -->
                                         <div class="filter-menu__item">
                                             <div class="filter-menu__title">
-                                                Rating
+                                                <span>Rating</span>
                                                 <img
                                                     src="./assets/icons/arrow-top.svg"
                                                     alt=""
+                                                    class="filter-menu__item-icon js-toggle"
+                                                    toggle-target="#hd-menu-4"
                                                 />
                                             </div>
-                                            <div class="filter-menu__wrap">
+                                            <div
+                                                id="hd-menu-4"
+                                                class="filter-menu__wrap"
+                                            >
                                                 <label
                                                     class="filter-menu__checkbox"
                                                 >
@@ -564,18 +584,23 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="filter__separate"></div>
+                                        <div class="separate"></div>
 
                                         <!-- Menu item 5 -->
                                         <div class="filter-menu__item">
                                             <div class="filter-menu__title">
-                                                Delivery Time
+                                                <span>Delivery Time</span>
                                                 <img
                                                     src="./assets/icons/arrow-top.svg"
                                                     alt=""
+                                                    class="filter-menu__item-icon js-toggle"
+                                                    toggle-target="#hd-menu-5"
                                                 />
                                             </div>
-                                            <div class="filter-menu__wrap">
+                                            <div
+                                                id="hd-menu-5"
+                                                class="filter-menu__wrap"
+                                            >
                                                 <label
                                                     class="filter-menu__checkbox"
                                                 >
@@ -656,11 +681,11 @@
                                     </div>
                                 </div>
                             </div>
+                            <div
+                                class="filter__overlay js-toggle"
+                                toggle-target="#open-filter"
+                            ></div>
                         </section>
-                        <div
-                            class="filter__overlay d-none d-lg-block hide js-toggle"
-                            toggle-target="#open-filter"
-                        ></div>
                     </div>
 
                     <!-- Food Category -->
@@ -777,7 +802,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="filter__separate"></div>
+                            <div class="separate"></div>
 
                             <div class="category__content">
                                 <div
@@ -846,13 +871,17 @@
                                     <!-- Item 1 -->
                                     <div class="col">
                                         <div class="category-card">
-                                            <div class="category-card__thumb">
-                                                <img
-                                                    src="./assets/img/category/category-item-1.png"
-                                                    alt=""
-                                                    class="category-card__img"
-                                                />
-                                            </div>
+                                            <a href="./restaurant-details.html">
+                                                <div
+                                                    class="category-card__thumb"
+                                                >
+                                                    <img
+                                                        src="./assets/img/category/category-item-1.png"
+                                                        alt=""
+                                                        class="category-card__img"
+                                                    />
+                                                </div>
+                                            </a>
                                             <div class="category-card__info">
                                                 <h3
                                                     class="category-card__heading"

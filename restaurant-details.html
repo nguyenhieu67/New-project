@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UT-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FOODEATS | Restaurant Details</title>
+
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./assets/favicon//apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="./assets/favicon/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Embed Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Serif:opsz,wght@8..144,600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <style>
+            .custom-select {
+                position: relative;
+                font-weight: 600;
+                user-select: none;
+                border-radius: 6px;
+            }
+
+            .custom-select select {
+                display: none; /*hide original SELECT element: */
+            }
+
+            .select-selected {
+                background: #fffae3;
+
+                border-radius: inherit;
+            }
+
+            /* Style the arrow inside the select element: */
+            .select-selected:after {
+                position: absolute;
+                content: url(./assets/img/category/arrow-down-1.svg);
+                top: 15px;
+                right: 15px;
+            }
+
+            /* Point the arrow upwards when the select box is open (active): */
+            .select-selected.select-arrow-active:after {
+                rotate: -180deg;
+                top: 15px;
+            }
+
+            /* style the items (options), including the selected item: */
+            .select-items div,
+            .select-selected {
+                color: var(--color-5);
+                padding: 20px;
+                border: 1px solid transparent;
+
+                cursor: pointer;
+            }
+
+            /* Style items (options): */
+            .select-items {
+                position: absolute;
+                background: #fffae3;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 99;
+            }
+
+            /* Hide the items when the select box is closed: */
+            .select-hide {
+                display: none;
+            }
+
+            .select-items div:hover,
+            .same-as-selected {
+                background-color: var(--color-primary);
+                color: #fff !important;
+            }
+        </style>
+
+        <!-- Scripts -->
+        <script src="./assets/js/main.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header-logined.html");
+        </script>
+
+        <!-- Main -->
+        <main>
+            <div class="container">
+                <div class="detail">
+                    <!-- Header -->
+                    <div class="detail-header">
+                        <div class="slideshow">
+                            <div class="slideshow__thumb">
+                                <img
+                                    src="./assets/img/category/category-item-1.png"
+                                    alt=""
+                                    class="slideshow__img"
+                                />
+                            </div>
+                            <img
+                                src="./assets/img/sliedshow/slideshow-logo.png"
+                                alt=""
+                                class="slideshow__logo"
+                            />
+                        </div>
+                        <div class="detail-header__content">
+                            <div class="detail-header__content-left">
+                                <h1 class="section__heading">
+                                    The Burger Cafe
+                                </h1>
+                                <div class="detail-header__introduce">
+                                    <span class="detail-header__introduce-h"
+                                        >$0 delivery fee</span
+                                    >
+                                    <span class="detail-header__introduce-h"
+                                        >Time:
+                                        <span
+                                            class="detail-header__introduce--blod"
+                                            style="margin-left: 12px"
+                                            >20 min</span
+                                        ></span
+                                    >
+
+                                    <span
+                                        >Food Type:
+                                        <span
+                                            class="detail-header__introduce--blod"
+                                            style="margin-left: 12px"
+                                            >Burger</span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="detail-header__introduce">
+                                    <span
+                                        class="detail-header__introduce-h"
+                                        style="gap: 6px"
+                                        ><span
+                                            class="detail-header__introduce--blod"
+                                        >
+                                            4.6
+                                        </span>
+                                        <img
+                                            src="./assets/icons/star.svg"
+                                            alt=""
+                                        />
+                                        (2,200)
+                                    </span>
+                                    <span class="detail-header__introduce-h"
+                                        ><span
+                                            class="detail-header__introduce--blod"
+                                            >94%</span
+                                        >
+                                        Food was good</span
+                                    >
+                                    <span class="detail-header__introduce-h"
+                                        ><span
+                                            class="detail-header__introduce--blod"
+                                            >96%</span
+                                        >
+                                        Delivery on time</span
+                                    >
+
+                                    <span
+                                        ><span
+                                            class="detail-header__introduce--blod"
+                                            >90%</span
+                                        >
+                                        Order was correct</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="detail-header__content-right">
+                                <button class="detail-header__warning">
+                                    <img
+                                        src="./assets/icons/warning.svg"
+                                        alt=""
+                                    />
+                                    Store info
+                                </button>
+                                <button class="detail-header__like">
+                                    <img
+                                        src="./assets/icons/heart.svg"
+                                        alt=""
+                                    />
+                                    Add to favorites
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="separate"></div>
+                    <!-- Body -->
+                    <div class="detail-body">
+                        <!-- Menu -->
+                        <div class="detail-menu">
+                            <ul class="detail-menu__list">
+                                <li>
+                                    <a href="#!" class="detail-menu__link">
+                                        Menu
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="detail-menu__link">
+                                        About
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="detail-menu__link">
+                                        Reviews
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Inner -->
+                        <div class="detail-food">
+                            <div class="food-menu">
+                                <h2 class="food-menu__heading">Food Menu</h2>
+                                <ul class="food-menu__list">
+                                    <li>
+                                        <a href="#!" class="food-menu__link">
+                                            Popular Items
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="food-menu__link">
+                                            Cheeseburger
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="food-menu__link">
+                                            Chicken Burger
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="food-menu__link">
+                                            Whataburger
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="food-menu__link">
+                                            Fatburger
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="food-menu__link">
+                                            Smashburger
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="food-menu__link">
+                                            Chili Burger
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="food-menu__link">
+                                            Bbq Burger
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="food-menu__link">
+                                            Smokin’ Burger
+                                        </a>
+                                    </li>
+                                    <div
+                                        class="category__menu-next food-menu__next d-lg-none"
+                                    >
+                                        <img
+                                            src="./assets/icons/arrow-right.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </ul>
+                            </div>
+
+                            <!-- Food row 1 -->
+                            <div class="food-row">
+                                <h2 class="food-menu__heading">
+                                    Popular Items
+                                </h2>
+
+                                <div
+                                    class="row row-cols-4 row-cols-lg-2 row-cols-md-1 gy-lg-2"
+                                >
+                                    <!-- Food item 1 -->
+                                    <div class="col">
+                                        <section class="food-item">
+                                            <div class="food-item__thumb">
+                                                <img
+                                                    src="./assets/img/category/category-item-1.png"
+                                                    alt=""
+                                                    class="food-item__img"
+                                                />
+                                            </div>
+                                            <h3 class="food-item__heading">
+                                                Eggs Benedict Burger
+                                            </h3>
+                                            <p class="food-item__desc">
+                                                Ground beef, hollandaise sauce
+                                                mix, stone ground mustard, with
+                                                a egg it’s so much taste...
+                                            </p>
+                                            <div class="food-item__wrap">
+                                                <span class="food-item__price"
+                                                    >$7.50</span
+                                                >
+                                                <div
+                                                    class="food-item__icon food-item__icon--current"
+                                                >
+                                                    <img
+                                                        src="./assets/icons/buy.svg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <!-- Food item 2 -->
+                                    <div class="col">
+                                        <section class="food-item">
+                                            <div class="food-item__thumb">
+                                                <img
+                                                    src="./assets/img/detail/food-item-2.png"
+                                                    alt=""
+                                                    class="food-item__img"
+                                                />
+                                            </div>
+                                            <h3 class="food-item__heading">
+                                                Eggs Benedict Burger
+                                            </h3>
+                                            <p class="food-item__desc">
+                                                Ground beef, hollandaise sauce
+                                                mix, stone ground mustard, with
+                                                a egg it’s so much taste...
+                                            </p>
+                                            <div class="food-item__wrap">
+                                                <span class="food-item__price"
+                                                    >$7.50</span
+                                                >
+                                                <div class="food-item__icon">
+                                                    <img
+                                                        src="./assets/icons/buy.svg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <!-- Food item 3 -->
+                                    <div class="col">
+                                        <section class="food-item">
+                                            <div class="food-item__thumb">
+                                                <img
+                                                    src="./assets/img/detail/food-item-3.png"
+                                                    alt=""
+                                                    class="food-item__img"
+                                                />
+                                            </div>
+                                            <h3 class="food-item__heading">
+                                                Eggs Benedict Burger
+                                            </h3>
+                                            <p class="food-item__desc">
+                                                Ground beef, hollandaise sauce
+                                                mix, stone ground mustard, with
+                                                a egg it’s so much taste...
+                                            </p>
+                                            <div class="food-item__wrap">
+                                                <span class="food-item__price"
+                                                    >$7.50</span
+                                                >
+                                                <div class="food-item__icon">
+                                                    <img
+                                                        src="./assets/icons/buy.svg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <!-- Food item 4 -->
+                                    <div class="col">
+                                        <section class="food-item">
+                                            <div class="food-item__thumb">
+                                                <img
+                                                    src="./assets/img/detail/food-item-4.png"
+                                                    alt=""
+                                                    class="food-item__img"
+                                                />
+                                            </div>
+                                            <h3 class="food-item__heading">
+                                                Eggs Benedict Burger
+                                            </h3>
+                                            <p class="food-item__desc">
+                                                Ground beef, hollandaise sauce
+                                                mix, stone ground mustard, with
+                                                a egg it’s so much taste...
+                                            </p>
+                                            <div class="food-item__wrap">
+                                                <span class="food-item__price"
+                                                    >$7.50</span
+                                                >
+                                                <div class="food-item__icon">
+                                                    <img
+                                                        src="./assets/icons/buy.svg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Food row 2 -->
+                            <div class="food-row">
+                                <h2 class="food-menu__heading">
+                                    Cheese Burger
+                                </h2>
+
+                                <div
+                                    class="row row-cols-4 row-cols-lg-2 row-cols-md-1"
+                                >
+                                    <!-- Food item 5 -->
+                                    <div class="col">
+                                        <section class="food-item">
+                                            <div class="food-item__thumb">
+                                                <img
+                                                    src="./assets/img/detail/food-item-5.png"
+                                                    alt=""
+                                                    class="food-item__img"
+                                                />
+                                            </div>
+                                            <h3 class="food-item__heading">
+                                                Special Cheese Burger
+                                            </h3>
+                                            <p class="food-item__desc">
+                                                Ground beef, hollandaise sauce
+                                                mix, stone ground mustard, with
+                                                a egg it’s so much taste...
+                                            </p>
+                                            <div class="food-item__wrap">
+                                                <span class="food-item__price"
+                                                    >$7.50</span
+                                                >
+                                                <div
+                                                    class="food-item__icon food-item__icon--current"
+                                                >
+                                                    <img
+                                                        src="./assets/icons/buy.svg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <!-- Food item 6 -->
+                                    <div class="col">
+                                        <section class="food-item">
+                                            <div class="food-item__thumb">
+                                                <img
+                                                    src="./assets/img/detail/food-item-6.png"
+                                                    alt=""
+                                                    class="food-item__img"
+                                                />
+                                            </div>
+                                            <h3 class="food-item__heading">
+                                                Special Cheese Burger
+                                            </h3>
+                                            <p class="food-item__desc">
+                                                Ground beef, hollandaise sauce
+                                                mix, stone ground mustard, with
+                                                a egg it’s so much taste...
+                                            </p>
+                                            <div class="food-item__wrap">
+                                                <span class="food-item__price"
+                                                    >$7.50</span
+                                                >
+                                                <div class="food-item__icon">
+                                                    <img
+                                                        src="./assets/icons/buy.svg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <!-- Food item 7 -->
+                                    <div class="col">
+                                        <section class="food-item">
+                                            <div class="food-item__thumb">
+                                                <img
+                                                    src="./assets/img/detail/food-item-7.png"
+                                                    alt=""
+                                                    class="food-item__img"
+                                                />
+                                            </div>
+                                            <h3 class="food-item__heading">
+                                                Special Cheese Burger
+                                            </h3>
+                                            <p class="food-item__desc">
+                                                Ground beef, hollandaise sauce
+                                                mix, stone ground mustard, with
+                                                a egg it’s so much taste...
+                                            </p>
+                                            <div class="food-item__wrap">
+                                                <span class="food-item__price"
+                                                    >$7.50</span
+                                                >
+                                                <div class="food-item__icon">
+                                                    <img
+                                                        src="./assets/icons/buy.svg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <!-- Food item 8 -->
+                                    <div class="col">
+                                        <section class="food-item">
+                                            <div class="food-item__thumb">
+                                                <img
+                                                    src="./assets/img/detail/food-item-8.png"
+                                                    alt=""
+                                                    class="food-item__img"
+                                                />
+                                            </div>
+                                            <h3 class="food-item__heading">
+                                                Special Cheese Burger
+                                            </h3>
+                                            <p class="food-item__desc">
+                                                Ground beef, hollandaise sauce
+                                                mix, stone ground mustard, with
+                                                a egg it’s so much taste...
+                                            </p>
+                                            <div class="food-item__wrap">
+                                                <span class="food-item__price"
+                                                    >$7.50</span
+                                                >
+                                                <div class="food-item__icon">
+                                                    <img
+                                                        src="./assets/icons/buy.svg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Food row 3 -->
+                            <div class="food-row">
+                                <h2 class="food-menu__heading">
+                                    Chicken Burger
+                                </h2>
+
+                                <div
+                                    class="row row-cols-4 row-cols-lg-2 row-cols-md-1"
+                                >
+                                    <!-- Food item 9 -->
+                                    <div class="col">
+                                        <section class="food-item">
+                                            <div class="food-item__thumb">
+                                                <img
+                                                    src="./assets/img/detail/food-item-9.png"
+                                                    alt=""
+                                                    class="food-item__img"
+                                                />
+                                            </div>
+                                            <h3 class="food-item__heading">
+                                                Chiken Burger
+                                            </h3>
+                                            <p class="food-item__desc">
+                                                Ground beef, hollandaise sauce
+                                                mix, stone ground mustard, with
+                                                a egg it’s so much taste...
+                                            </p>
+                                            <div class="food-item__wrap">
+                                                <span class="food-item__price"
+                                                    >$7.50</span
+                                                >
+                                                <div
+                                                    class="food-item__icon food-item__icon--current"
+                                                >
+                                                    <img
+                                                        src="./assets/icons/buy.svg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <!-- Food item 10 -->
+                                    <div class="col">
+                                        <section class="food-item">
+                                            <div class="food-item__thumb">
+                                                <img
+                                                    src="./assets/img/detail/food-item-10.png"
+                                                    alt=""
+                                                    class="food-item__img"
+                                                />
+                                            </div>
+                                            <h3 class="food-item__heading">
+                                                Chiken Burger
+                                            </h3>
+                                            <p class="food-item__desc">
+                                                Ground beef, hollandaise sauce
+                                                mix, stone ground mustard, with
+                                                a egg it’s so much taste...
+                                            </p>
+                                            <div class="food-item__wrap">
+                                                <span class="food-item__price"
+                                                    >$7.50</span
+                                                >
+                                                <div class="food-item__icon">
+                                                    <img
+                                                        src="./assets/icons/buy.svg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <!-- Food item 11 -->
+                                    <div class="col">
+                                        <section class="food-item">
+                                            <div class="food-item__thumb">
+                                                <img
+                                                    src="./assets/img/detail/food-item-11.png"
+                                                    alt=""
+                                                    class="food-item__img"
+                                                />
+                                            </div>
+                                            <h3 class="food-item__heading">
+                                                Chiken Burger
+                                            </h3>
+                                            <p class="food-item__desc">
+                                                Ground beef, hollandaise sauce
+                                                mix, stone ground mustard, with
+                                                a egg it’s so much taste...
+                                            </p>
+                                            <div class="food-item__wrap">
+                                                <span class="food-item__price"
+                                                    >$7.50</span
+                                                >
+                                                <div class="food-item__icon">
+                                                    <img
+                                                        src="./assets/icons/buy.svg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <!-- Food item 12 -->
+                                    <div class="col">
+                                        <section class="food-item">
+                                            <div class="food-item__thumb">
+                                                <img
+                                                    src="./assets/img/detail/food-item-12.png"
+                                                    alt=""
+                                                    class="food-item__img"
+                                                />
+                                            </div>
+                                            <h3 class="food-item__heading">
+                                                Chiken Burger
+                                            </h3>
+                                            <p class="food-item__desc">
+                                                Ground beef, hollandaise sauce
+                                                mix, stone ground mustard, with
+                                                a egg it’s so much taste...
+                                            </p>
+                                            <div class="food-item__wrap">
+                                                <span class="food-item__price"
+                                                    >$7.50</span
+                                                >
+                                                <div class="food-item__icon">
+                                                    <img
+                                                        src="./assets/icons/buy.svg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- About & Contact -->
+                        <article class="detail-abc">
+                            <h2 class="food-menu__heading">
+                                About The Burger Cafe
+                            </h2>
+                            <div class="detail__address">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.984271413959!2d73.8599947!3d18.619777199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c775d3e10527%3A0x690cd16e4cdffc66!2sTHE%20BURGER%20CAFE!5e0!3m2!1sen!2sjp!4v1708484312240!5m2!1sen!2sjp"
+                                    width="100%"
+                                    height="100%"
+                                    style="border: 0"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
+                            <div class="detail__contact">
+                                <div class="detail__contact-inner">
+                                    <div class="detail__contact-icon">
+                                        <img
+                                            src="./assets/icons/phone.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="detail__contact-wrap">
+                                        <span
+                                            class="detail__contact-text--small"
+                                            >Phone</span
+                                        >
+                                        <span
+                                            class="detail__contact-text--medium"
+                                            >(000) 120 768 9988</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="detail__contact-inner">
+                                    <div
+                                        class="detail__contact-icon detail__contact-icon-ms"
+                                    >
+                                        <img
+                                            src="./assets/icons/messenger.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="detail__contact-wrap">
+                                        <span
+                                            class="detail__contact-text--small"
+                                            >Email</span
+                                        >
+                                        <span
+                                            class="detail__contact-text--medium"
+                                            >contact@gmail.com</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Customer Review -->
+                        <div class="detail-review">
+                            <div class="review">
+                                <h2 class="food-menu__heading">
+                                    Customer Review
+                                </h2>
+                                <div class="review__rating">
+                                    <span class="review__rating-title"
+                                        >2200 Reviews</span
+                                    >
+                                    <div class="review__rating-icon">
+                                        <img
+                                            src="./assets/icons/star.svg"
+                                            alt=""
+                                        />
+                                        <img
+                                            src="./assets/icons/star.svg"
+                                            alt=""
+                                        />
+                                        <img
+                                            src="./assets/icons/star.svg"
+                                            alt=""
+                                        />
+                                        <img
+                                            src="./assets/icons/star.svg"
+                                            alt=""
+                                        />
+                                        <img
+                                            src="./assets/icons/star.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <span class="review__rating-value">
+                                        <span class="review__rating-value--blod"
+                                            >4.6</span
+                                        >
+                                        Overall Rating
+                                    </span>
+                                </div>
+                                <div class="separate"></div>
+                                <div class="review__ops">
+                                    <span class="category__ops-value">
+                                        Sort By:
+                                    </span>
+                                    <div
+                                        class="custom-select"
+                                        style="width: 170px"
+                                    >
+                                        <select>
+                                            <option value="0">
+                                                Most Recent
+                                            </option>
+                                            <option value="1">
+                                                Most Recent
+                                            </option>
+                                            <option value="2">
+                                                Recommended
+                                            </option>
+                                            <option value="3">Distance</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Blockquote -->
+                                <div class="blq review__blq">
+                                    <div
+                                        class="blq-content review__blq-content"
+                                    >
+                                        <!-- Row list 1 -->
+                                        <div class="blq__row review__blq-row">
+                                            <!-- Column item 1 -->
+                                            <div class="blq__col">
+                                                <article class="blq__item">
+                                                    <div class="blq__icon">
+                                                        <img
+                                                            src="./assets/icons/blockquote-icon.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="blq__icon-star">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <blockquote
+                                                        class="blq__ctm"
+                                                    >
+                                                        I’m obsessed with
+                                                        excellent customer
+                                                        service...thanks
+                                                        foodeats for being
+                                                        awesome!
+                                                    </blockquote>
+                                                    <div
+                                                        class="blq-separate"
+                                                    ></div>
+                                                    <div class="blq__name">
+                                                        Peter Moor
+                                                    </div>
+                                                    <div class="blq__ai">
+                                                        UI/UX Designer
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <!-- Column item 2 -->
+                                            <div class="blq__col">
+                                                <article class="blq__item">
+                                                    <div class="blq__icon">
+                                                        <img
+                                                            src="./assets/icons/blockquote-icon.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="blq__icon-star">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <blockquote
+                                                        class="blq__ctm"
+                                                    >
+                                                        I’m obsessed with
+                                                        excellent customer
+                                                        service...thanks
+                                                        foodeats for being
+                                                        awesome!
+                                                    </blockquote>
+                                                    <div
+                                                        class="blq-separate"
+                                                    ></div>
+                                                    <div class="blq__name">
+                                                        Peter Moor
+                                                    </div>
+                                                    <div class="blq__ai">
+                                                        UI/UX Designer
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <!-- Column item 3 -->
+                                            <div class="blq__col">
+                                                <article class="blq__item">
+                                                    <div class="blq__icon">
+                                                        <img
+                                                            src="./assets/icons/blockquote-icon.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="blq__icon-star">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <blockquote
+                                                        class="blq__ctm"
+                                                    >
+                                                        I’m obsessed with
+                                                        excellent customer
+                                                        service...thanks
+                                                        foodeats for being
+                                                        awesome!
+                                                    </blockquote>
+                                                    <div
+                                                        class="blq-separate"
+                                                    ></div>
+                                                    <div class="blq__name">
+                                                        Peter Moor
+                                                    </div>
+                                                    <div class="blq__ai">
+                                                        UI/UX Designer
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <!-- Column item 4 -->
+                                            <div class="blq__col">
+                                                <article class="blq__item">
+                                                    <div class="blq__icon">
+                                                        <img
+                                                            src="./assets/icons/blockquote-icon.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="blq__icon-star">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <blockquote
+                                                        class="blq__ctm"
+                                                    >
+                                                        I’m obsessed with
+                                                        excellent customer
+                                                        service...thanks
+                                                        foodeats for being
+                                                        awesome!
+                                                    </blockquote>
+                                                    <div
+                                                        class="blq-separate"
+                                                    ></div>
+                                                    <div class="blq__name">
+                                                        Peter Moor
+                                                    </div>
+                                                    <div class="blq__ai">
+                                                        UI/UX Designer
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <!-- Column item 5 -->
+                                            <div class="blq__col">
+                                                <article class="blq__item">
+                                                    <div class="blq__icon">
+                                                        <img
+                                                            src="./assets/icons/blockquote-icon.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="blq__icon-star">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <blockquote
+                                                        class="blq__ctm"
+                                                    >
+                                                        I’m obsessed with
+                                                        excellent customer
+                                                        service...thanks
+                                                        foodeats for being
+                                                        awesome!
+                                                    </blockquote>
+                                                    <div
+                                                        class="blq-separate"
+                                                    ></div>
+                                                    <div class="blq__name">
+                                                        Peter Moor
+                                                    </div>
+                                                    <div class="blq__ai">
+                                                        UI/UX Designer
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <!-- Column item 6 -->
+                                            <div class="blq__col">
+                                                <article class="blq__item">
+                                                    <div class="blq__icon">
+                                                        <img
+                                                            src="./assets/icons/blockquote-icon.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="blq__icon-star">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <blockquote
+                                                        class="blq__ctm"
+                                                    >
+                                                        I’m obsessed with
+                                                        excellent customer
+                                                        service...thanks
+                                                        foodeats for being
+                                                        awesome!
+                                                    </blockquote>
+                                                    <div
+                                                        class="blq-separate"
+                                                    ></div>
+                                                    <div class="blq__name">
+                                                        Peter Moor
+                                                    </div>
+                                                    <div class="blq__ai">
+                                                        UI/UX Designer
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <!-- Column item 7 -->
+                                            <div class="blq__col">
+                                                <article class="blq__item">
+                                                    <div class="blq__icon">
+                                                        <img
+                                                            src="./assets/icons/blockquote-icon.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="blq__icon-star">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <blockquote
+                                                        class="blq__ctm"
+                                                    >
+                                                        I’m obsessed with
+                                                        excellent customer
+                                                        service...thanks
+                                                        foodeats for being
+                                                        awesome!
+                                                    </blockquote>
+                                                    <div
+                                                        class="blq-separate"
+                                                    ></div>
+                                                    <div class="blq__name">
+                                                        Peter Moor
+                                                    </div>
+                                                    <div class="blq__ai">
+                                                        UI/UX Designer
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <!-- Column item 8 -->
+                                            <div class="blq__col">
+                                                <article class="blq__item">
+                                                    <div class="blq__icon">
+                                                        <img
+                                                            src="./assets/icons/blockquote-icon.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="blq__icon-star">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <blockquote
+                                                        class="blq__ctm"
+                                                    >
+                                                        I’m obsessed with
+                                                        excellent customer
+                                                        service...thanks
+                                                        foodeats for being
+                                                        awesome!
+                                                    </blockquote>
+                                                    <div
+                                                        class="blq-separate"
+                                                    ></div>
+                                                    <div class="blq__name">
+                                                        Peter Moor
+                                                    </div>
+                                                    <div class="blq__ai">
+                                                        UI/UX Designer
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <!-- Column item 9 -->
+                                            <div class="blq__col">
+                                                <article class="blq__item">
+                                                    <div class="blq__icon">
+                                                        <img
+                                                            src="./assets/icons/blockquote-icon.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="blq__icon-star">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <blockquote
+                                                        class="blq__ctm"
+                                                    >
+                                                        I’m obsessed with
+                                                        excellent customer
+                                                        service...thanks
+                                                        foodeats for being
+                                                        awesome!
+                                                    </blockquote>
+                                                    <div
+                                                        class="blq-separate"
+                                                    ></div>
+                                                    <div class="blq__name">
+                                                        Peter Moor
+                                                    </div>
+                                                    <div class="blq__ai">
+                                                        UI/UX Designer
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="review__link">
+                                    <a
+                                        href="#!"
+                                        class="review__link-btn btn btn--primary"
+                                    >
+                                        View All Reviews
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+
+        <script>
+            var x, i, j, l, ll, selElmnt, a, b, c;
+            /* Look for any elements with the class "custom-select": */
+            x = document.getElementsByClassName("custom-select");
+            l = x.length;
+            for (i = 0; i < l; i++) {
+                selElmnt = x[i].getElementsByTagName("select")[0];
+                ll = selElmnt.length;
+                /* For each element, create a new DIV that will act as the selected item: */
+                a = document.createElement("DIV");
+                a.setAttribute("class", "select-selected");
+                a.innerHTML =
+                    selElmnt.options[selElmnt.selectedIndex].innerHTML;
+                x[i].appendChild(a);
+                /* For each element, create a new DIV that will contain the option list: */
+                b = document.createElement("DIV");
+                b.setAttribute("class", "select-items select-hide");
+                for (j = 1; j < ll; j++) {
+                    /* For each option in the original select element,
+        create a new DIV that will act as an option item: */
+                    c = document.createElement("DIV");
+                    c.innerHTML = selElmnt.options[j].innerHTML;
+                    c.addEventListener("click", function (e) {
+                        /* When an item is clicked, update the original select box,
+            and the selected item: */
+                        var y, i, k, s, h, sl, yl;
+                        s =
+                            this.parentNode.parentNode.getElementsByTagName(
+                                "select"
+                            )[0];
+                        sl = s.length;
+                        h = this.parentNode.previousSibling;
+                        for (i = 0; i < sl; i++) {
+                            if (s.options[i].innerHTML == this.innerHTML) {
+                                s.selectedIndex = i;
+                                h.innerHTML = this.innerHTML;
+                                y =
+                                    this.parentNode.getElementsByClassName(
+                                        "same-as-selected"
+                                    );
+                                yl = y.length;
+                                for (k = 0; k < yl; k++) {
+                                    y[k].removeAttribute("class");
+                                }
+                                this.setAttribute("class", "same-as-selected");
+                                break;
+                            }
+                        }
+                        h.click();
+                    });
+                    b.appendChild(c);
+                }
+                x[i].appendChild(b);
+                a.addEventListener("click", function (e) {
+                    /* When the select box is clicked, close any other select boxes,
+        and open/close the current select box: */
+                    e.stopPropagation();
+                    closeAllSelect(this);
+                    this.nextSibling.classList.toggle("select-hide");
+                    this.classList.toggle("select-arrow-active");
+                });
+            }
+
+            function closeAllSelect(elmnt) {
+                /* A function that will close all select boxes in the document,
+      except the current select box: */
+                var x,
+                    y,
+                    i,
+                    xl,
+                    yl,
+                    arrNo = [];
+                x = document.getElementsByClassName("select-items");
+                y = document.getElementsByClassName("select-selected");
+                xl = x.length;
+                yl = y.length;
+                for (i = 0; i < yl; i++) {
+                    if (elmnt == y[i]) {
+                        arrNo.push(i);
+                    } else {
+                        y[i].classList.remove("select-arrow-active");
+                    }
+                }
+                for (i = 0; i < xl; i++) {
+                    if (arrNo.indexOf(i)) {
+                        x[i].classList.add("select-hide");
+                    }
+                }
+            }
+
+            /* If the user clicks anywhere outside the select box,
+    then close all select boxes: */
+            document.addEventListener("click", closeAllSelect);
+        </script>
+    </body>
+</html>

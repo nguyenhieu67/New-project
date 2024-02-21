@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 *,
 ::before,
 ::after {
@@ -97,4 +99,14 @@ em {
 b,
 strong {
     font-weight: 600;
+}
+
+.separate {
+    margin: 30px 0;
+    height: 1px;
+    background: var(--color-5);
+
+    @include abstracts.screen(lg) {
+        margin: 10px 0 30px;
+    }
 }
